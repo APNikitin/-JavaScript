@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 1
+            , b = 1
+            , c, d;
+        c = ++a;
+        alert(c); // 2 сначла инкреминтировали потом присвоили 
+        d = b++;
+        alert(d); // 1 сначала присвоили потом b инкриментировали
+        c = (2 + ++a);
+        alert(c); // 5
+        d = (2 + b++);
+        alert(d); // 4
+        alert(a); // 3
+        alert(b); // 3
+        if (null == 0) {
+            document.write("true");
+        }
+        else document.write("false null это не ноль, это значение неизвестно переменной");
+    </script>
+</body>
+
+</html>

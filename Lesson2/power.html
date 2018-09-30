@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function power(val, pow){
+            if (pow==1 || pow==0){
+                return val;
+            }
+            return val * power(val,pow-1);
+        }
+        var val=parseFloat(prompt("Введите аргумент для возведения степень"));
+        var pow=parseFloat(prompt("Введите степень"));
+        document.write(power(val,pow));
+    </script> 
+
+
+</body>
+
+</html>
