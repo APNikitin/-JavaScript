@@ -8,24 +8,29 @@
 
 <body>
     <script>
-        var a = 1
-            , b = 1
-            , c, d;
+        var a = 1, b = 1, c, d;
         c = ++a;
-        alert(c); // 2 сначла инкреминтировали потом присвоили 
+        alert(c); // с=2 сначала инкреминтировали потом присвоили 
         d = b++;
-        alert(d); // 1 сначала присвоили потом b инкриментировали
-        c = (2 + ++a);
+        alert(d); // d=1 сначала присвоили потом b инкриментировали
+        c = (2 + ++a); //2+ inc(a=2)
         alert(c); // 5
-        d = (2 + b++);
+        d = (2 + b++); //2+ (b=2), inc(b)
         alert(d); // 4
         alert(a); // 3
         alert(b); // 3
+        
+        var e = 2;
+        var x = 1 + (e *= 2);
+        document.write("<p> e=2 </p> <p>1 + (e *= 2) = "+x+" т.к. e *= 2 равняется 4 </p>");
+        
         if (null == 0) {
             document.write("true");
         }
-        else document.write("false null это не ноль, это значение неизвестно переменной");
+        else document.write("<p>null == 0</p>false, null это не ноль, это значение неизвестно ");
     </script>
+    <p></p>
 </body>
+
 
 </html>
