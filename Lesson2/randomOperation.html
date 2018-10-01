@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = parseInt(Math.random() *40-20);
+        var b = parseInt(Math.random() *40-20);
+        document.writeln("a="+a+" b="+b);
+        if (a>=0 && b>=0){
+            document.writeln(a-b);
+        } 
+        else if(a<0 && b<0){
+           document.writeln(a*b);     
+        }
+        else{
+            document.writeln(a+b);
+        }
+        
+    </script>
+</body>
+</html>

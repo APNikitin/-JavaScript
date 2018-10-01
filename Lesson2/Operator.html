@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>operators</title>
+</head>
+<body>
+   <script>
+       function sum(x=0,y=0){
+           var s=x+y;
+           return s;
+       }
+       function diff(x=0,y=0){
+           var s=x-y;
+           return s;
+       }
+       function mult(x=0,y=0){
+           var s=x*y;
+           return s;
+       }
+       function divis(x=0,y=0){
+           var s=x/y;
+           return s;
+       }
+        function mathOperation(arg1, arg2, operation){
+            var s=0;
+            switch (operation){
+                case "+":
+                    s=sum(arg1,arg2);
+                    break;
+                case "-":
+                    s=diff(arg1,arg2);
+                    break;
+                case "*":
+                    s=mult(arg1,arg2);
+                    break;
+                case "/":
+                    s=divis(arg1,arg2);
+                    break;
+                default:
+                    alert("введен недопусти мый оператор");
+            }
+            return s;
+        }
+       var x=parseFloat(prompt("Введите первый аргумент"));
+       var y=parseFloat(prompt("Введите второй аргумент"));
+       var operator=prompt("Введите одну из операций +, -, *, /:");
+       
+       document.writeln(mathOperation(x,y,operator));
+    </script>
+    
+</body>
+</html>
