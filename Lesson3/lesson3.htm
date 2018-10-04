@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*__Простые числа от 0 до 100*/
+        document.write("<p>Простые числа от 0 до 100</p>");       
+        var i=0;
+        while (i<100){
+            var count=0;
+             for (var j=1;j<8;j++){
+                 if ( (i>=j) && !(i%j)){
+                     count++;
+                 }
+                 
+             }
+            if (i>7){count++;}
+            if (count<=2){
+                document.write(i + ", ");
+            }
+           
+            i++;
+           
+        }
+        //______________________________________________________
+        /*__Четные и нечетные от 0 до 10*/
+        document.write("<p>Четные и нечетные от 0 до 10</p>"); 
+        i=0;
+        do{
+            if (!(i)){
+                document.write("<p>"+ i +" - это ноль</p>");
+            }
+            else if((i+2)%2){
+                    document.write("<p>"+ i +" - нечетное число</p>");
+                    }
+                    else{
+                    document.write("<p>"+ i +" - четное число</p>");
+                    }
+            i++;
+        } while (i<11); 
+       //_______________________________________________________
+        document.write("<p>Вывести с помощью цикла for числа от 0 до 9, НЕ используя тело цикла. То есть выглядеть должно вот так: for(…){// здесь пусто}</p>");
+        for (i=0;i<10;document.write(i++ +" ")){
+            
+        }
+        //________________________________________________
+        //__Нарисовать пирамиду с помощью console.log
+        var x="x";
+        for(i=0;i<20;i++){
+            console.log(x);
+            x+="x";
+        }
+    </script>
+    <p></p>
+</body>
+</html>
