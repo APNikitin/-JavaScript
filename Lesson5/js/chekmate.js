@@ -44,6 +44,7 @@ var plateChekh={
     plate: null,
     plateId:"plateCell",
     literCell:["A","B","C","D","E","F","G","H"],
+    literFigure:["Л","K","C","Кр","Ф","С","К","Л"],
     getSideLength: function()  {
         if (screen.availWidth >= screen.availHeight) {
             return screen.availHeight * 0.7;
@@ -64,21 +65,21 @@ var plateChekh={
                 nCell.setCellSize(this.getCellLength(this.getSideLength()));
                 this.plate.appendChild(nCell.box);
                 switch (j){
-                    case 0:{
+                    case 0:
                         if ((i>0)&&(i<9)){
                             nCell.setCellText("<p>" + this.literCell[i-1] + "</p>");
                             nCell.setCellColor("#fff");
                         };
                         break;
-                    };
-                    case 9:{
+                    
+                    case 9:
                         if ((i>0)&&(i<9)){
                             nCell.setCellText("<p>" + this.literCell[i-1] + "</p>");
                             nCell.setCellColor("#fff");
                             nCell.setCellTextOver();
                         };
                         break;
-                    };
+                    
                     default:{
                         switch (i){
                             case 0:
@@ -92,7 +93,14 @@ var plateChekh={
                                 nCell.setCellColor("#fff");
                                 nCell.setCellTextOver();
                                 break;
+                            
                             default:{
+                                if ((j==1)||(j==8)){
+                                    nCell.setCellText("<p style='color:green'>" + this.literFigure[i-1] + "</p>");
+                                }
+                                if ((j==2)||(j==7)){
+                                    nCell.setCellText("<p style='color:green'> п </p>");
+                                }
                                 if((i+j+1)%2) {
                                     
                                     nCell.setCellColor("#fff");
